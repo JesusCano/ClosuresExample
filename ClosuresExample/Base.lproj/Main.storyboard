@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClosuresExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="um2-we-OUe">
+                                <rect key="frame" x="113.5" y="433" width="187" height="30"/>
+                                <state key="normal" title="Go to the second controller"/>
+                                <connections>
+                                    <segue destination="GHF-Jz-RHP" kind="presentation" identifier="SecondViewController" id="zWf-Eu-uxg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="um2-we-OUe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6FX-vU-TlC"/>
+                            <constraint firstItem="um2-we-OUe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PuV-TT-Gl6"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="139"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="BbR-3r-phc">
+            <objects>
+                <viewController id="GHF-Jz-RHP" customClass="SecondViewController" customModule="ClosuresExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T2J-kc-EVg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-We-cFA">
+                                <rect key="frame" x="16" y="16" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gl0-Hu-xrg"/>
+                                </constraints>
+                                <state key="normal" title="Closure"/>
+                                <connections>
+                                    <action selector="closureButtonPressed:" destination="GHF-Jz-RHP" eventType="touchUpInside" id="PXm-hf-tXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVF-6n-jyU">
+                                <rect key="frame" x="16" y="82" width="382" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1dR-Yi-y3g"/>
+                                </constraints>
+                                <state key="normal" title="Delegate"/>
+                                <connections>
+                                    <action selector="delegateButtonPressed:" destination="GHF-Jz-RHP" eventType="touchUpInside" id="uLJ-JS-dzU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lb5-pj-anv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lb5-pj-anv" firstAttribute="trailing" secondItem="tTb-We-cFA" secondAttribute="trailing" constant="16" id="2EQ-x5-Qpl"/>
+                            <constraint firstItem="Lb5-pj-anv" firstAttribute="trailing" secondItem="KVF-6n-jyU" secondAttribute="trailing" constant="16" id="3wt-JE-aV0"/>
+                            <constraint firstItem="KVF-6n-jyU" firstAttribute="leading" secondItem="Lb5-pj-anv" secondAttribute="leading" constant="16" id="Y2d-PG-IfE"/>
+                            <constraint firstItem="KVF-6n-jyU" firstAttribute="top" secondItem="tTb-We-cFA" secondAttribute="bottom" constant="16" id="jzK-S1-Dnd"/>
+                            <constraint firstItem="tTb-We-cFA" firstAttribute="leading" secondItem="Lb5-pj-anv" secondAttribute="leading" constant="16" id="pao-wA-oBe"/>
+                            <constraint firstItem="tTb-We-cFA" firstAttribute="top" secondItem="Lb5-pj-anv" secondAttribute="top" constant="16" id="r0T-4O-1eg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mm4-5C-LTO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

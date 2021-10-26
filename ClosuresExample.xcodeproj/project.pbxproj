@@ -13,6 +13,7 @@
 		8F8002E326DAA75500384A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8002E126DAA75500384A70 /* Main.storyboard */; };
 		8F8002E526DAA75900384A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8002E426DAA75900384A70 /* Assets.xcassets */; };
 		8F8002E826DAA75900384A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8002E626DAA75900384A70 /* LaunchScreen.storyboard */; };
+		8F8002F026DAAE3F00384A70 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8002EF26DAAE3F00384A70 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8F8002E426DAA75900384A70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F8002E726DAA75900384A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F8002E926DAA75900384A70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8002EF26DAAE3F00384A70 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8F8002E426DAA75900384A70 /* Assets.xcassets */,
 				8F8002E626DAA75900384A70 /* LaunchScreen.storyboard */,
 				8F8002E926DAA75900384A70 /* Info.plist */,
+				8F8002EF26DAAE3F00384A70 /* SecondViewController.swift */,
 			);
 			path = ClosuresExample;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F8002F026DAAE3F00384A70 /* SecondViewController.swift in Sources */,
 				8F8002E026DAA75500384A70 /* ViewController.swift in Sources */,
 				8F8002DC26DAA75500384A70 /* AppDelegate.swift in Sources */,
 				8F8002DE26DAA75500384A70 /* SceneDelegate.swift in Sources */,
